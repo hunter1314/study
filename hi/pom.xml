@@ -1,0 +1,72 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <!-- 上面pom的约束信息  -->
+  <!-- 指定了当前pom的版本 -->
+  <modelVersion>4.0.0</modelVersion>
+  
+  <groupId>com.imooc.hi</groupId><!-- 反写的公司网址+项目名 -->
+  <artifactId>hi</artifactId> <!-- 项目名+模块名 -->
+  <!-- 3个数字分别表示大版本，分支版本，小版本 
+       snapshot表示快照
+       alpha内部测试
+       beta公测
+       release稳定
+       GA正式发布    
+   -->
+  <version>0.0.1-SNAPSHOT</version> <!-- war，zip，pom默认为jar -->
+
+  <name>hi</name><!-- 项目描述名 -->
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope><!-- 依赖范围，只在src/test目录下可用这个依赖jar包  -->
+      <!-- <optional></optional> 值集为true，false，默认false，表示设置依赖是否可选-->
+      <!-- <exclusions><exclusion></exclusion></exclusions> 排除依赖传递列表-->
+    </dependency>
+    
+    <!-- redis的jedis对象jar -->
+    <dependency>
+	    <groupId>redis.clients</groupId>
+	    <artifactId>jedis</artifactId>
+	    <version>2.6.1</version>
+	</dependency>
+    <dependency>
+	    <groupId>org.apache.activemq</groupId>
+	    <artifactId>activemq-client</artifactId>
+	    <version>5.15.9</version>
+	</dependency>	    
+  </dependencies>
+  
+  <!-- 依赖管理 -->
+  <!-- 
+  <dependencyManagement>
+  	<dependencies>
+  		<dependency></dependency>
+  	</dependencies>
+  </dependencyManagement>
+   -->
+   <!-- 插件列表 -->
+   <!-- 
+   <build>
+   	<plugins>
+   		<plugin>
+   			<groupId></groupId>
+   			<artifactId></artifactId>
+   			<version></version>
+   		</plugin>
+   	</plugins>
+   </build>
+   <parent></parent>
+   <modules>
+   		<module></module>
+   </modules>
+    -->
+</project>
