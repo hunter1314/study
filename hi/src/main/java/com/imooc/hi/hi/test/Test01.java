@@ -16,5 +16,6 @@ public class Test01 {
 		for(Integer l : l1) {
 			System.out.println(l);
 		}
+		System.out.println("just test");
 	}
 }
